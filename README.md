@@ -6,6 +6,7 @@ Self-taught tester with several months of commercial experience and over one yea
 • Confluence 
 • Postman 
 • GIT
+• Trello 
 
 
 # Tech skills 
