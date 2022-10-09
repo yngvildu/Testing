@@ -7,6 +7,8 @@ Self-taught tester with several months of commercial experience and over one yea
 • Postman 
 • GIT
 • Trello 
+• TestLink
+• Linux 
 
 
 # Tech skills 
