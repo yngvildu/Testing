@@ -1,5 +1,12 @@
 # Testing
 Self-taught tester with several months of commercial experience and over one year of non-commercial experience. The repository contains my projects.
+- performing manual tests,
+- API tests,
+- performing integration tests,
+- reporting test results,
+- preparation of test scenarios,
+- testing new functionalities.
+
 
 # Tools 
 • Jira
