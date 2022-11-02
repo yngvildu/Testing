@@ -1,5 +1,6 @@
 # Testing
 Self-taught tester with several months of commercial experience and over one year of non-commercial experience. The repository contains my projects.
+In current work
 - performing manual tests,
 - API tests,
 - performing integration tests,
