@@ -26,3 +26,8 @@ In current work
 • Creating Test Cases 
 • Creating Test Scenarios
 • Basic knowledge of SQL 
+
+
+
+Certified tester.
+• Portfolio: https://github.com/yngvildu/Testing
