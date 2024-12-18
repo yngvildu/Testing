@@ -19,6 +19,7 @@ In current work
 • Linux (CentOS)
 • TestRail
 • Virtual Machine
+•
 
 
 # Tech skills 
@@ -35,6 +36,7 @@ In current work
 
 
 Certified tester.
-• Portfolio: https://github.com/yngvildu/Testing.
-• LinkedIn: https://www.linkedin.com/in/marzena-hajduk/.
-• Contact: szucka.marzena@gmail.com.
+• Portfolio: https://github.com/yngvildu/Testing
+• LinkedIn: https://www.linkedin.com/in/marzena-hajduk/
+• Contact: szucka.marzena@gmail.com
+•
