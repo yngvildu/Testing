@@ -1,5 +1,5 @@
 # Testing
-Self-taught tester with several months of commercial experience and over one year of non-commercial experience. The repository contains my projects.
+In short. Self-taught tester with several years of commercial experience and over year of non-commercial experience. The repository contains my projects. For more information please contact me.
 In current work
 - performing manual tests,
 - API tests,
@@ -16,18 +16,25 @@ In current work
 • GIT
 • Trello 
 • TestLink
-• Linux (CentOS) 
+• Linux (CentOS)
+• TestRail
+• Virtual Machine
 
 
 # Tech skills 
-• Software Testing
-• Finding Bugs
-• Reporting Bugs
-• Creating Test Cases 
-• Creating Test Scenarios
-• Basic knowledge of SQL 
+- Software Testing,
+- Finding Bugs,
+- Reporting Bugs,
+- Creating Test Cases,
+- Creating Test Raport,
+- Creating Test Scenarios,
+- Basic knowledge of SQL,
+- API testing, 
 
 
 
-Certified tester.
-• Portfolio: https://github.com/yngvildu/Testing
+
+Certified tester.,
+• Portfolio: https://github.com/yngvildu/Testing,
+• LinkedIn: https://www.linkedin.com/in/marzena-hajduk/,
+• Contact: szucka.marzena@gmail.com,
