@@ -35,7 +35,6 @@ In current work
 
 
 
-• Certified tester
 • LinkedIn: https://www.linkedin.com/in/marzena-hajduk/
 • Contact: szucka.marzena@gmail.com
 •
