@@ -36,7 +36,6 @@ In current work
 
 
 • Certified tester
-• Portfolio: https://github.com/yngvildu/Testing
 • LinkedIn: https://www.linkedin.com/in/marzena-hajduk/
 • Contact: szucka.marzena@gmail.com
 •
