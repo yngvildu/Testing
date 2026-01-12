@@ -1,0 +1,35 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('Checkout') {
+            steps {
+                // Jenkins sam pobierze kod, jeśli skonfigurowałeś "Pipeline from SCM"
+                checkout scm
+            }
+        }
+
+        stage('Setup Environment') {
+            steps {
+                bat """
+                python -m venv venv
+                venv\\Scripts\\pip install -r requirements.txt
+                """
+            }
+        }
+
+        stage('Run Tests') {
+            steps {
+                // Uruchamiamy testy i tworzymy raport XML dla Jenkinsa
+                bat "venv\\Scripts\\pytest --junitxml=results.xml"
+            }
+        }
+    }
+
+    post {
+        always {
+            // To sprawi, że wyniki testów pojawią się w interfejsie Jenkinsa
+            junit 'results.xml'
+        }
+    }
+}
