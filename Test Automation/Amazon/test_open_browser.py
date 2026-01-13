@@ -27,7 +27,7 @@ def test_accept_cookies(driver):
         print(f"Cookies banner did not appear or error occurred: {e}")
 
 def test_run_test():
-    driver = get_driver()
+    driver = test_get_driver()
     url = 'https://www.amazon.pl/'
     
     try:
