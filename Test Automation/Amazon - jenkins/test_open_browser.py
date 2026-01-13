@@ -31,10 +31,13 @@ def test_accept_cookies(test_get_driver):
 def test_run_test():
     url = 'https://www.amazon.pl/'
     driver.get(url)
-    
-    try:
-    title = driver.title
-    print(f"Page title: {title}")
-    assert "Amazon.pl" in title
+try:
+        accept_cookies(driver)
+        title = driver.title
+        print(f"Page title: {title}")
+        assert "Amazon.pl" in title
+    except Exception as e:
+        print(f"An error occurred during title check: {e}")
+        raise e
 
 
