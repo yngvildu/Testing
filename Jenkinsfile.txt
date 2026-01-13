@@ -2,31 +2,25 @@ pipeline {
     agent any
 
     stages {
-        stage('Checkout') {
-            steps {
-                checkout scm
-            }
-        }
-
         stage('Setup Environment') {
             steps {
-                bat """
+                bat '''
                 python -m venv venv
                 venv\\Scripts\\pip install -r requirements.txt
-                """
+                '''
             }
         }
 
         stage('Run Tests') {
             steps {
-                bat "venv\\Scripts\\pytest --junitxml=results.xml"
+                bat "venv\\Scripts\\pytest \"Test Automation/Amazon\" --junitxml=results.xml"
             }
         }
     }
 
     post {
         always {
-            junit 'results.xml'
+            junit allowEmptyResults: true, testResults: 'results.xml'
         }
     }
 }
