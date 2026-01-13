@@ -31,8 +31,8 @@ def test_run_test():
     url = 'https://www.amazon.pl/'
     
     try:
-        driver.get(url)
-        accept_cookies(driver)
+        test_driver.get(url)
+        test_accept_cookies(driver)
         title = driver.title
         print(f"Page title: {title}")
         assert "Amazon.pl" in title
