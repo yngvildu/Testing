@@ -6,7 +6,6 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
-@pytest.fixture
 def test_get_driver():
     options = webdriver.ChromeOptions()
     options.add_argument('--headless')
