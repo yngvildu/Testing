@@ -6,13 +6,13 @@ from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.keys import Keys  
 from Open_browser import * 
 
-def search():
-    driver = get_driver()
+def test_search():
+    driver = test_get_driver()
     url = 'https://www.amazon.pl/'
 
     try:
         driver.get(url)
-        accept_cookies(driver)
+        test_accept_cookies(driver)
         wait = WebDriverWait(driver, 10)
         site_form = wait.until(EC.presence_of_element_located((By.CSS_SELECTOR, "#twotabsearchtextbox")))  
         site_form.send_keys("suszarka dyson")
@@ -29,4 +29,4 @@ def search():
         print("Browser closed.")
 
 if __name__ == "__main__":
-    search() 
+    test_search() 
