@@ -15,7 +15,6 @@ def driver():
     options.add_argument('--window-size=1920,1080')
     driver = webdriver.Chrome(options=options)
     chrome_options = Options()
-    driver = webdriver.Chrome(options=chrome_options)
     driver.maximize_window()
     yield driver
     driver.quit()
@@ -34,14 +33,8 @@ def test_run_test():
     driver.get(url)
     
     try:
-        test_accept_cookies(driver)
-        title = driver.title
-        print(f"Page title: {title}")
-        assert "Amazon.pl" in title
-        
-    finally:
-        driver.quit()
-        print("Browser closed.")
+    title = driver.title
+    print(f"Page title: {title}")
+    assert "Amazon.pl" in title
 
-if __name__ == "__main__":
-    test_run_test()
+
