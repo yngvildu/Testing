@@ -7,7 +7,7 @@ from selenium.webdriver.support import expected_conditions as EC
 from test_open_browser import *
 import time
 
-def test_add_product():
+def test_add_product(test_get_driver):
     driver = test_get_driver()
     wait = WebDriverWait(driver, 20)
 
