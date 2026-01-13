@@ -18,7 +18,7 @@ def test_get_driver():
     driver.maximize_window()
     return driver
 
-def test_accept_cookies(driver):
+def test_accept_cookies(test_get_driver):
     try:
         wait = WebDriverWait(driver, 10)
         cookie_btn = wait.until(EC.element_to_be_clickable((By.ID, "sp-cc-accept")))
