@@ -7,8 +7,7 @@ from selenium.webdriver.support import expected_conditions as EC
 from test_open_browser import *
 import time
 
-def test_add_product(test_get_driver):
-    driver = test_get_driver
+def test_add_product(driver):
     wait = WebDriverWait(driver, 20)
 
     try:
@@ -39,9 +38,3 @@ def test_add_product(test_get_driver):
 
     except Exception as e:
         print(f"Error: {e}")
-    
-    finally:
-        driver.quit()
-
-if __name__ == "__main__":
-    test_add_product()
