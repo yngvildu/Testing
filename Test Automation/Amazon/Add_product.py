@@ -7,13 +7,13 @@ from selenium.webdriver.support import expected_conditions as EC
 from Open_browser import *
 import time
 
-def add_product():
-    driver = get_driver()
+def test_add_product():
+    driver = test_get_driver()
     wait = WebDriverWait(driver, 20)
 
     try:
         driver.get('https://www.amazon.pl/')
-        accept_cookies(driver)
+        test_accept_cookies(driver)
         wait = WebDriverWait(driver, 10)
         search_bar = wait.until(EC.element_to_be_clickable((By.ID, "twotabsearchtextbox")))
         search_bar.send_keys("Biblia")
@@ -44,4 +44,4 @@ def add_product():
         driver.quit()
 
 if __name__ == "__main__":
-    add_product()
+    test_add_product()
