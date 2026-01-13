@@ -6,8 +6,7 @@ from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.keys import Keys  
 from test_open_browser import *
 
-def test_search(test_get_driver):
-    driver = test_get_driver
+def test_search(driver):
     url = 'https://www.amazon.pl/'
 
     try:
@@ -22,11 +21,4 @@ def test_search(test_get_driver):
         print("Search submitted successfully.")
 
     except Exception as e:
-        print(f"An error occurred: {e}")
-    
-    finally:
-        driver.quit()
-        print("Browser closed.")
-
-if __name__ == "__main__":
-    test_search() 
+        print(f"An error occurred: {e}") 
