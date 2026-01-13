@@ -5,8 +5,8 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from test_open_browser import *
 
-def test_search_menu():
-    driver = test_get_driver(test_get_driver)
+def test_search_menu(test_get_driver):
+    driver = test_get_driver()
     url = 'https://www.amazon.pl/'
 
     try: 
