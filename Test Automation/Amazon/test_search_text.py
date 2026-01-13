@@ -7,7 +7,7 @@ from selenium.webdriver.common.keys import Keys
 from test_open_browser import *
 
 def test_search(test_get_driver):
-    driver = test_get_driver()
+    driver = test_get_driver
     url = 'https://www.amazon.pl/'
 
     try:
