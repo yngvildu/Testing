@@ -5,13 +5,13 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from Open_browser import *
 
-def search_menu():
-    driver = get_driver()
+def test_search_menu():
+    driver = test_get_driver()
     url = 'https://www.amazon.pl/'
 
     try: 
         driver.get(url)
-        accept_cookies(driver)
+        test_accept_cookies(driver)
         wait = WebDriverWait(driver, 10)
         menu_btn = wait.until(EC.presence_of_element_located((By.ID, "nav-hamburger-menu")))
         menu_btn.click()
@@ -30,4 +30,4 @@ def search_menu():
         print("Browser closed.")
 
 if __name__ == "__main__":
-    search_menu() 
+    test_search_menu() 
