@@ -13,7 +13,7 @@ pipeline {
 
         stage('Run Tests') {
             steps {
-                bat "venv\\Scripts\\pytest \"Test Automation/Amazon\" --junitxml=results.xml"
+                bat "venv\\Scripts\\pytest \"Test Automation/Amazon - jenkins\" --junitxml=results.xml"
             }
         }
     }
