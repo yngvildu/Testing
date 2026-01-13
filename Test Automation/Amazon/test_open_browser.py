@@ -5,7 +5,7 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
-def get_driver():
+def test_get_driver():
     options = webdriver.ChromeOptions()
     options.add_argument('--headless')
     options.add_argument('--no-sandbox')
@@ -16,7 +16,7 @@ def get_driver():
     driver.maximize_window()
     return driver
 
-def accept_cookies(driver):
+def test_accept_cookies(driver):
     try:
         wait = WebDriverWait(driver, 10)
         cookie_btn = wait.until(EC.element_to_be_clickable((By.ID, "sp-cc-accept")))
@@ -25,7 +25,7 @@ def accept_cookies(driver):
     except Exception as e:
         print(f"Cookies banner did not appear or error occurred: {e}")
 
-def run_test():
+def test_run_test():
     driver = get_driver()
     url = 'https://www.amazon.pl/'
     
@@ -41,4 +41,4 @@ def run_test():
         print("Browser closed.")
 
 if __name__ == "__main__":
-    run_test()
+    test_run_test()
