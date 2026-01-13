@@ -4,7 +4,7 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.keys import Keys  
-from test_open_browser import *
+from test_open_browser import accept_cookies
 
 def test_search(driver):
     url = 'https://www.amazon.pl/'
