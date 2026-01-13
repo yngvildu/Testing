@@ -1,0 +1,98 @@
+Started by user yngvildu
+Obtained Jenkinsfile from git https://github.com/yngvildu/Testing
+[Pipeline] Start of Pipeline
+[Pipeline] node
+Running on Jenkins in C:\ProgramData\Jenkins\.jenkins\workspace\Automation tests
+[Pipeline] {
+[Pipeline] stage
+[Pipeline] { (Declarative: Checkout SCM)
+[Pipeline] checkout
+The recommended git tool is: git.exe
+No credentials specified
+ > git.exe rev-parse --resolve-git-dir C:\ProgramData\Jenkins\.jenkins\workspace\Automation tests\.git # timeout=10
+Fetching changes from the remote Git repository
+ > git.exe config remote.origin.url https://github.com/yngvildu/Testing # timeout=10
+Fetching upstream changes from https://github.com/yngvildu/Testing
+ > git.exe --version # timeout=10
+ > git --version # 'git version 2.52.0.windows.1'
+ > git.exe fetch --tags --force --progress -- https://github.com/yngvildu/Testing +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git.exe rev-parse "refs/remotes/origin/master^{commit}" # timeout=10
+Checking out Revision 26ea59489e8199bf80d668c8ef768dda5e4cfbca (refs/remotes/origin/master)
+ > git.exe config core.sparsecheckout # timeout=10
+ > git.exe checkout -f 26ea59489e8199bf80d668c8ef768dda5e4cfbca # timeout=10
+Commit message: "Rename confest.py to conftest.py"
+ > git.exe rev-list --no-walk 7428d7316fad8ced70e5bdcecb0b109b4b23a4e1 # timeout=10
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] withEnv
+[Pipeline] {
+[Pipeline] stage
+[Pipeline] { (Setup Environment)
+[Pipeline] bat
+
+C:\ProgramData\Jenkins\.jenkins\workspace\Automation tests>if not exist venv (python -m venv venv ) 
+
+C:\ProgramData\Jenkins\.jenkins\workspace\Automation tests>venv\Scripts\pip install -r requirements.txt 
+Requirement already satisfied: selenium in c:\programdata\jenkins\.jenkins\workspace\automation tests\venv\lib\site-packages (from -r requirements.txt (line 1)) (4.39.0)
+Requirement already satisfied: pytest in c:\programdata\jenkins\.jenkins\workspace\automation tests\venv\lib\site-packages (from -r requirements.txt (line 2)) (9.0.2)
+Requirement already satisfied: webdriver-manager in c:\programdata\jenkins\.jenkins\workspace\automation tests\venv\lib\site-packages (from -r requirements.txt (line 3)) (4.0.2)
+Requirement already satisfied: urllib3<3.0,>=2.5.0 in c:\programdata\jenkins\.jenkins\workspace\automation tests\venv\lib\site-packages (from urllib3[socks]<3.0,>=2.5.0->selenium->-r requirements.txt (line 1)) (2.6.3)
+Requirement already satisfied: trio<1.0,>=0.31.0 in c:\programdata\jenkins\.jenkins\workspace\automation tests\venv\lib\site-packages (from selenium->-r requirements.txt (line 1)) (0.32.0)
+Requirement already satisfied: trio-websocket<1.0,>=0.12.2 in c:\programdata\jenkins\.jenkins\workspace\automation tests\venv\lib\site-packages (from selenium->-r requirements.txt (line 1)) (0.12.2)
+Requirement already satisfied: certifi>=2025.10.5 in c:\programdata\jenkins\.jenkins\workspace\automation tests\venv\lib\site-packages (from selenium->-r requirements.txt (line 1)) (2026.1.4)
+Requirement already satisfied: typing_extensions<5.0,>=4.15.0 in c:\programdata\jenkins\.jenkins\workspace\automation tests\venv\lib\site-packages (from selenium->-r requirements.txt (line 1)) (4.15.0)
+Requirement already satisfied: websocket-client<2.0,>=1.8.0 in c:\programdata\jenkins\.jenkins\workspace\automation tests\venv\lib\site-packages (from selenium->-r requirements.txt (line 1)) (1.9.0)
+Requirement already satisfied: attrs>=23.2.0 in c:\programdata\jenkins\.jenkins\workspace\automation tests\venv\lib\site-packages (from trio<1.0,>=0.31.0->selenium->-r requirements.txt (line 1)) (25.4.0)
+Requirement already satisfied: sortedcontainers in c:\programdata\jenkins\.jenkins\workspace\automation tests\venv\lib\site-packages (from trio<1.0,>=0.31.0->selenium->-r requirements.txt (line 1)) (2.4.0)
+Requirement already satisfied: idna in c:\programdata\jenkins\.jenkins\workspace\automation tests\venv\lib\site-packages (from trio<1.0,>=0.31.0->selenium->-r requirements.txt (line 1)) (3.11)
+Requirement already satisfied: outcome in c:\programdata\jenkins\.jenkins\workspace\automation tests\venv\lib\site-packages (from trio<1.0,>=0.31.0->selenium->-r requirements.txt (line 1)) (1.3.0.post0)
+Requirement already satisfied: sniffio>=1.3.0 in c:\programdata\jenkins\.jenkins\workspace\automation tests\venv\lib\site-packages (from trio<1.0,>=0.31.0->selenium->-r requirements.txt (line 1)) (1.3.1)
+Requirement already satisfied: cffi>=1.14 in c:\programdata\jenkins\.jenkins\workspace\automation tests\venv\lib\site-packages (from trio<1.0,>=0.31.0->selenium->-r requirements.txt (line 1)) (2.0.0)
+Requirement already satisfied: wsproto>=0.14 in c:\programdata\jenkins\.jenkins\workspace\automation tests\venv\lib\site-packages (from trio-websocket<1.0,>=0.12.2->selenium->-r requirements.txt (line 1)) (1.3.2)
+Requirement already satisfied: pysocks!=1.5.7,<2.0,>=1.5.6 in c:\programdata\jenkins\.jenkins\workspace\automation tests\venv\lib\site-packages (from urllib3[socks]<3.0,>=2.5.0->selenium->-r requirements.txt (line 1)) (1.7.1)
+Requirement already satisfied: colorama>=0.4 in c:\programdata\jenkins\.jenkins\workspace\automation tests\venv\lib\site-packages (from pytest->-r requirements.txt (line 2)) (0.4.6)
+Requirement already satisfied: iniconfig>=1.0.1 in c:\programdata\jenkins\.jenkins\workspace\automation tests\venv\lib\site-packages (from pytest->-r requirements.txt (line 2)) (2.3.0)
+Requirement already satisfied: packaging>=22 in c:\programdata\jenkins\.jenkins\workspace\automation tests\venv\lib\site-packages (from pytest->-r requirements.txt (line 2)) (25.0)
+Requirement already satisfied: pluggy<2,>=1.5 in c:\programdata\jenkins\.jenkins\workspace\automation tests\venv\lib\site-packages (from pytest->-r requirements.txt (line 2)) (1.6.0)
+Requirement already satisfied: pygments>=2.7.2 in c:\programdata\jenkins\.jenkins\workspace\automation tests\venv\lib\site-packages (from pytest->-r requirements.txt (line 2)) (2.19.2)
+Requirement already satisfied: requests in c:\programdata\jenkins\.jenkins\workspace\automation tests\venv\lib\site-packages (from webdriver-manager->-r requirements.txt (line 3)) (2.32.5)
+Requirement already satisfied: python-dotenv in c:\programdata\jenkins\.jenkins\workspace\automation tests\venv\lib\site-packages (from webdriver-manager->-r requirements.txt (line 3)) (1.2.1)
+Requirement already satisfied: pycparser in c:\programdata\jenkins\.jenkins\workspace\automation tests\venv\lib\site-packages (from cffi>=1.14->trio<1.0,>=0.31.0->selenium->-r requirements.txt (line 1)) (2.23)
+Requirement already satisfied: h11<1,>=0.16.0 in c:\programdata\jenkins\.jenkins\workspace\automation tests\venv\lib\site-packages (from wsproto>=0.14->trio-websocket<1.0,>=0.12.2->selenium->-r requirements.txt (line 1)) (0.16.0)
+Requirement already satisfied: charset_normalizer<4,>=2 in c:\programdata\jenkins\.jenkins\workspace\automation tests\venv\lib\site-packages (from requests->webdriver-manager->-r requirements.txt (line 3)) (3.4.4)
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (Run Tests)
+[Pipeline] bat
+
+C:\ProgramData\Jenkins\.jenkins\workspace\Automation tests>cd "Test Automation/Amazon - jenkins" 
+
+C:\ProgramData\Jenkins\.jenkins\workspace\Automation tests\Test Automation\Amazon - jenkins>..\..\venv\Scripts\pytest --junitxml=..\..\results.xml 
+============================= test session starts =============================
+platform win32 -- Python 3.14.2, pytest-9.0.2, pluggy-1.6.0
+rootdir: C:\ProgramData\Jenkins\.jenkins\workspace\Automation tests\Test Automation\Amazon - jenkins
+collected 4 items
+
+test_add_product.py .                                                    [ 25%]
+test_open_browser.py .                                                   [ 50%]
+test_search_menu.py .                                                    [ 75%]
+test_search_text.py .                                                    [100%]
+
+- generated xml file: C:\ProgramData\Jenkins\.jenkins\workspace\Automation tests\results.xml -
+============================= 4 passed in 41.90s ==============================
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (Declarative: Post Actions)
+[Pipeline] junit
+Recording test results
+[Checks API] No suitable checks publisher found.
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] }
+[Pipeline] // withEnv
+[Pipeline] }
+[Pipeline] // node
+[Pipeline] End of Pipeline
+Finished: SUCCESS
