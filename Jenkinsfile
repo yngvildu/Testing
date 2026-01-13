@@ -5,7 +5,9 @@ pipeline {
         stage('Setup Environment') {
             steps {
                 bat '''
-                python -m venv venv
+                if not exist venv (
+                    python -m venv venv
+                )
                 venv\\Scripts\\pip install -r requirements.txt
                 '''
             }
@@ -13,7 +15,10 @@ pipeline {
 
         stage('Run Tests') {
             steps {
-                bat "venv\\Scripts\\pytest \"Test Automation/Amazon - jenkins\" --junitxml=results.xml"
+                bat """
+                cd "Test Automation/Amazon - jenkins"
+                ..\\..\\venv\\Scripts\\pytest --junitxml=..\\..\\results.xml
+                """
             }
         }
     }
