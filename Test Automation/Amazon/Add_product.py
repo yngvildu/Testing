@@ -46,4 +46,3 @@ def add_product():
 if __name__ == "__main__":
     add_product()
 
-    http://localhost:8080/job/Automation%20tests/

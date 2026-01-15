@@ -8,6 +8,8 @@ def get_driver():
     chrome_options = Options()
     driver = webdriver.Chrome(options=chrome_options)
     driver.maximize_window()
+    chrome_options.add_argument("--user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36")
+    chrome_options.add_argument("--disable-blink-features=AutomationControlled")
     return driver
 
 def accept_cookies(driver):
